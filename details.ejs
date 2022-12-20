@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>SSN</th>
+            <th>NAME</th>
+            <th>DEPARTMENT</th>
+            <th>DOB</th>
+            <th>DOJ</th>
+            <th>SALARY</th>
+            <th>EXPERIENCE</th>
+        </tr>
+   
+             <% for(let i=0;i<data.length;i++){%>
+              <tr>
+                 
+                <td><%-data[i].ssn%></td>
+                <td><%-data[i].name%></td>
+                <td><%-data[i].department%></td>
+                <td><%-data[i].dob%></td>
+                <td><%-data[i].doj%></td>
+                <td><%-data[i].salary%></td>
+                <td><%-data[i].experience%></td>
+                <td><button><a href="/delete-detail?id=<%-data[i].id%>&exp=<%-data[i].experience%>">DELETE</a></button></td>
+                <td><button><a href="/update-details?id=<%-data[i].id%>">UPDATE</a></button></td>
+               
+
+              </tr>
+            
+            <%}%>  
+        
+    </table>
+    
+</body>
+</html>
